@@ -1,0 +1,10 @@
+# Local server — everything is pure Python (installs on Termux without compiling)
+# Note: uvicorn is deliberately installed without the [standard] extra (uvloop/httptools need a build step on Termux)
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2
+requests>=2.31
+telethon>=1.36        # only for tools/login.py (uses pure-Python pyaes; do not install cryptg)
+cryptography>=42      # AES-256-GCM. On Termux: pkg install python-cryptography
+pynacl>=1.5           # encrypting GitHub Secrets. On Termux: pkg install libsodium
+# pysocks>=1.7        # optional: only if you need a proxy for login.py

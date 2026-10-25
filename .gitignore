@@ -1,0 +1,9 @@
+.env
+*.session
+session.enc
+content.key
+config.json
+__pycache__/
+*.pyc
+.tg-bridge/
+bus/
